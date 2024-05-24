@@ -2,10 +2,9 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('app-canapum-cache').then(function(cache) {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/style.css',
-        '/script.js',
+        'https://appcanapum.blogspot.com/',
+        'https://canapum.github.io/service-worker.js',
+        'https://canapum.github.io/manifest.json',
         'https://canapum.github.io/images/icons/icon-192x192.png',
         'https://canapum.github.io/images/icons/icon-512x512.png'
       ]);
