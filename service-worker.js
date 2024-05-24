@@ -6,8 +6,8 @@ self.addEventListener('install', function(event) {
         '/index.html',
         '/style.css',
         '/script.js',
-        '/images/icons/icon-192x192.png',
-        '/images/icons/icon-512x512.png'
+        'https://canapum.github.io/images/icons/icon-192x192.png',
+        'https://canapum.github.io/images/icons/icon-512x512.png'
       ]);
     })
   );
