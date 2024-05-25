@@ -1,7 +1,7 @@
 {
   "name": "Canapum Downloads",
   "short_name": "Canapum",
-  "description": "Downloads sem ADS",
+  "description": "Downloads sem Anúncios",
   "start_url": "https://appcanapum.blogspot.com/",
   "display": "standalone",
   "background_color": "#ffffff",
