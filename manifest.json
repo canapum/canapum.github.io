@@ -5,7 +5,7 @@
   "start_url": "https://appcanapum.blogspot.com/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#0f0f0f",
   "icons": [
     {
       "src": "https://canapum.github.io/images/icons/icon-192x192.png",
