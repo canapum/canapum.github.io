@@ -14,6 +14,9 @@ body {
     color: #141515;
     max-width: 480px;
     margin: auto;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .header {
