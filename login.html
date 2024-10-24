@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal X - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Portal X</h1>
+            <form action="#">
+                <div class="input-group">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" placeholder="Usuário" required>
+                </div>
+                <div class="input-group">
+                    
+                    <input type="password" placeholder="Senha" required>
+                    <ion-icon name="eye-outline" class="toggle-password" onclick="togglePassword()"></ion-icon>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="login-button">Entrar</button>
+                <div class="divider">ou</div>
+                <button class="google-button">
+                    <ion-icon name="logo-google"></ion-icon>
+                    Entrar com Google
+                </button>
+            </form>
+            <div class="register">
+                Não tem conta? <a href="register.html">Registrar</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.querySelector('input[type="password"]');
+            const eyeIcon = document.querySelector('.toggle-password');
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.name = "eye-off-outline";
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.name = "eye-outline";
+            }
+        }
+    </script>
+</body>
+</html>
