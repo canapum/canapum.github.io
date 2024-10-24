@@ -36,6 +36,7 @@ h1 {
     margin-bottom: 20px;
     font-size: 28px;
     color: #333;
+    font-weight: 300;
 }
 
 .input-group {
@@ -111,7 +112,7 @@ h1 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #eeeeee;
+    background: #f5f5f5;
     color: #333;
     border: none;
     padding: 12px;
@@ -123,10 +124,12 @@ h1 {
 
 .google-button ion-icon {
     margin-right: 8px;
+    color: red;
 }
 
 .google-button:hover {
-    background-color: #dddddd;
+    background-color: #f2f2f2;
+
 }
 
 .register {
