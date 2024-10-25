@@ -57,5 +57,33 @@
             menu.classList.toggle('hidden');
         }
     </script>
+
+    <script>
+        // Configuração do Firebase
+        const firebaseConfig = {
+        apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
+        authDomain: "waltemarbr.firebaseapp.com",
+        projectId: "waltemarbr",
+        storageBucket: "waltemarbr.appspot.com",
+        messagingSenderId: "21358148527",
+        appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
+        measurementId: "G-H16T9ZYGSH"
+        };
+
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Verificar se o usuário está logado
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                console.log('Usuário está logado:', user);
+            } else {
+                console.log('Usuário não está logado, redirecionando para a página de login.');
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+
+
 </body>
 </html>
