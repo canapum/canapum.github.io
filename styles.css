@@ -103,7 +103,8 @@ nav ul li .btn:hover {
 }
 
 .cta-btn:hover {
-    background-color: #e0e0e0;
+    background-color: #00d473;
+    color: #fff;
 }
 
 /* Rodapé */
