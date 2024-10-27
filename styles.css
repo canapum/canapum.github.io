@@ -17,7 +17,7 @@ body {
 
 h2 {
     font-weight: 300;
-    background: -webkit-linear-gradient(45deg, #09009f, #00d473 80%);
+    background: -webkit-linear-gradient(45deg, #ffffff, #09009f 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
