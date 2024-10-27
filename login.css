@@ -75,7 +75,7 @@ h1 {
 }
 
 .forgot-password a {
-    color: #007bff;
+    color: #00d473;
     text-decoration: none;
     font-size: 14px;
 }
@@ -86,7 +86,7 @@ h1 {
 
 .login-button {
     width: 100%;
-    background-color: #007bff;
+    background-color: #00d473;
     color: #fff;
     border: none;
     padding: 12px;
@@ -125,7 +125,7 @@ h1 {
 
 .google-button ion-icon {
     margin-right: 8px;
-    color: #007bff;
+    color: #00d473;
 }
 
 .google-button:hover {
@@ -139,7 +139,7 @@ h1 {
 }
 
 .register a {
-    color: #007bff;
+    color: #00d473;
     text-decoration: none;
 }
 
