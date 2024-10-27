@@ -3,16 +3,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/fireba
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 import { getFirestore, collection, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
-// Configuração do Firebase
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-        apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
-        authDomain: "waltemarbr.firebaseapp.com",
-        projectId: "waltemarbr",
-        storageBucket: "waltemarbr.appspot.com",
-        messagingSenderId: "21358148527",
-        appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
-        measurementId: "G-H16T9ZYGSH"
-        };
+  apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
+  authDomain: "waltemarbr.firebaseapp.com",
+  projectId: "waltemarbr",
+  storageBucket: "waltemarbr.appspot.com",
+  messagingSenderId: "21358148527",
+  appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
+  measurementId: "G-H16T9ZYGSH"
+};
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
