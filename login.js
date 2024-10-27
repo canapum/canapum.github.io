@@ -4,7 +4,7 @@ import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWith
 import { getFirestore, collection, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 // Configuração do Firebase
-        const firebaseConfig = {
+const firebaseConfig = {
         apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
         authDomain: "waltemarbr.firebaseapp.com",
         projectId: "waltemarbr",

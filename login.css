@@ -1,148 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Google Sans', sans-serif;
+a{
+  font-weight: 500;
+  color: #00D473;
 }
-
 body {
-    background-color: #f0f0f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
-
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.logo {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
 }
-
-.login-box {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: center;
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);*/
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #333;
-    font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
 }
-
-.input-group {
-    position: relative;
-    margin-bottom: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.input-group ion-icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #555;
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
-
-.input-group input {
-    width: 100%;
-    padding: 12px 40px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
+.password-container {
+  position: relative;
+  width: 100%;
 }
-
-.input-group .toggle-password {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #555;
+.password-container input {
+  padding-right: 2.5rem;
 }
-
-.forgot-password {
-    text-align: right;
-    margin-bottom: 20px;
+.password-container ion-icon {
+  position: absolute;
+  right: 1rem;
+  top: 40%;
+  color: #999;
+  fobt-size: 24px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
-
-.forgot-password a {
-    color: #00d473;
-    text-decoration: none;
-    font-size: 14px;
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 50px;
+  background: #00D473;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 1rem;
 }
-
-.forgot-password a:hover {
-    text-decoration: underline;
+button:hover {
+  background: #0056b3;
 }
-
-.login-button {
-    width: 100%;
-    background-color: #00d473;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
-    transition: background-color 0.3s ease;
-}
-
-.login-button:hover {
-    background-color: #2980b9;
-}
-
-.divider {
-    margin: 20px 0;
-    font-size: 14px;
-    color: #aaa;
-}
-
 .google-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background: #fff;
-    color: #333;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
 }
-
-.google-button ion-icon {
-    margin-right: 8px;
-    color: #00d473;
+.google-button img {
+  margin-right: 0.5rem;
 }
-
 .google-button:hover {
-    background-color: #f2f2f2;
-
+  background: #dddddd;
+}
+.form-switch {
+  margin-top: 1rem;
+  text-align: center;
+}
+.form-switch a {
+  color: #00D473;
+  text-decoration: none;
+  cursor: pointer;
+}
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
 }
 
-.register {
-    margin-top: 20px;
-    font-size: 14px;
+/* ////// MENSAGEM //////// */
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
-.register a {
-    color: #00d473;
-    text-decoration: none;
+.message.show {
+  opacity: 1;
+  visibility: visible;
 }
 
-.register a:hover {
-    text-decoration: underline;
+.message.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
