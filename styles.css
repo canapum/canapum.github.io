@@ -17,9 +17,8 @@ body {
 
 h2 {
     font-weight: 300;
-    background: -webkit-linear-gradient(45deg, #ffffff, #09009f 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
+    text-shadow: text-shadow: 0px 1px 1px rgba(0,0,0,.5);
 }
 
 a {
