@@ -95,9 +95,15 @@
          // Inicialize o valor da variável
          rangeInput.style.setProperty('--slider-value', `${rangeInput.value}%`);
       </script>
+
+
+
+      
       <!-- FIREBASE CONFIG -->
-      <script>
-         const firebaseConfig = {
+
+<script>
+      // Configuração Firebase
+      const firebaseConfig = {
          apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
          authDomain: "waltemarbr.firebaseapp.com",
          projectId: "waltemarbr",
@@ -105,24 +111,41 @@
          messagingSenderId: "21358148527",
          appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
          measurementId: "G-H16T9ZYGSH"
-         };
-         firebase.initializeApp(firebaseConfig);
-      </script>
-      <!-- Script para verificar se o usuário está logado -->
-      <script>
-         document.addEventListener("DOMContentLoaded", function () {
-             // Espera que o Firebase Auth esteja pronto para verificar o usuário
-             firebase.auth().onAuthStateChanged(function (user) {
-                 if (!user) {
-                     // Usuário não está logado, redireciona para login
-                     window.location.href = "login.html";
-                 } else {
-                     // Usuário está logado, permanece na página inicial
-                     console.log("Usuário autenticado:", user.email);
-                 }
-             });
+      };
+      firebase.initializeApp(firebaseConfig);
+   </script>
+
+   <!-- Script para verificar o status de autenticação -->
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         // Use localStorage para checar a sessão do usuário
+         const usuarioLogado = localStorage.getItem("usuarioLogado");
+
+         if (usuarioLogado === "true") {
+            console.log("Usuário logado anteriormente. Acesso permitido.");
+            return; // Já está logado, fica na página inicial
+         }
+
+         // Verifica o estado de autenticação do Firebase
+         firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+               // Usuário está logado; guarda no localStorage
+               localStorage.setItem("usuarioLogado", "true");
+               console.log("Usuário autenticado:", user.email);
+            } else {
+               // Usuário não está logado; redireciona para login
+               window.location.href = "login.html";
+            }
          });
-      </script>
+      });
+   </script>
+
+
+
+
+
+
+      
       <script src="add-home.js"></script>
       <script src="script-sw.js"></script>
    </body>
