@@ -95,22 +95,20 @@
          // Inicialize o valor da variável
          rangeInput.style.setProperty('--slider-value', `${rangeInput.value}%`);
       </script>
-       
-<!-- FIREBASE CONFIG -->
-<script>
-  const firebaseConfig = {
-  apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
-  authDomain: "waltemarbr.firebaseapp.com",
-  projectId: "waltemarbr",
-  storageBucket: "waltemarbr.appspot.com",
-  messagingSenderId: "21358148527",
-  appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
-  measurementId: "G-H16T9ZYGSH"
-};
-firebase.initializeApp(firebaseConfig);
-</script>
-       
-       <!-- Script para verificar se o usuário está logado -->
+      <!-- FIREBASE CONFIG -->
+      <script>
+         const firebaseConfig = {
+         apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
+         authDomain: "waltemarbr.firebaseapp.com",
+         projectId: "waltemarbr",
+         storageBucket: "waltemarbr.appspot.com",
+         messagingSenderId: "21358148527",
+         appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
+         measurementId: "G-H16T9ZYGSH"
+         };
+         firebase.initializeApp(firebaseConfig);
+      </script>
+      <!-- Script para verificar se o usuário está logado -->
       <script>
          document.addEventListener("DOMContentLoaded", function () {
              // Espera que o Firebase Auth esteja pronto para verificar o usuário
@@ -125,9 +123,7 @@ firebase.initializeApp(firebaseConfig);
              });
          });
       </script>
-       
       <script src="add-home.js"></script>
       <script src="script-sw.js"></script>
-      
    </body>
 </html>
