@@ -1,0 +1,180 @@
+{
+  "id": "/",
+  "name": "Portal X",
+  "short_name": "Portalx",
+  "version": "1.0.0",
+  "display": "standalone",
+  "background_color": "#00ffbf",
+  "theme_color": "#00ffbf",
+  "start_url": "/index.html",
+  "orientation": "any",
+  "scope": "/",
+  "description": "O seu portal de Tecnologia.",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.canapum",
+      "id": "com.canapum"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/id1234567890",
+      "id": "1234567890"
+    }
+  ],
+  "handle_links": "all",
+  "file_handlers": [
+    {
+      "action": "/open-file",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "image/png": [".png"],
+        "image/jpeg": [".jpg", ".jpeg"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+canapum",
+      "url": "/?url=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "file",
+          "accept": ["audio/*", "video/*", "image/*"]
+        }
+      ]
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "Back For Good",
+      "short_name": "Back For Good",
+      "description": "Music of Gary Barlow",
+      "url": "/?videoId=qHZiIxprsrs",
+      "icons": [
+        {
+          "src": "shortcuts/filme.svg",
+          "sizes": "96x96",
+          "type": "image/svg"
+        }
+      ]
+    },
+    {
+      "name": "Fazer um Pix",
+      "short_name": "Fazer um Pix",
+      "description": "Doação Voluntária",
+      "url": "/bank/inter.html",
+      "icons": [
+        {
+          "src": "shortcuts/pix.svg",
+          "sizes": "96x96",
+          "type": "image/svg"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "src": "widgets/music-widget.html",
+      "type": "html",
+      "purpose": "any"
+    }
+  ],
+  "icons": [
+    {
+      "src": "icons/icon192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot/screenshot-mobile.png",
+      "sizes": "360x640",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshot/screenshot-desktop-wide.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpg",
+      "form_factor": "wide"
+    }
+  ],
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": [
+    "music"
+  ],
+  "scope_extensions": [
+    {
+      "origin": "https://canapum.github.io"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing",
+    "navigate_existing_client": {
+      "target_url_patterns": [
+        "https://canapum.github.io/*"
+      ]
+    }
+  },
+  "iarc_rating_id": "ESRB_E"
+}
