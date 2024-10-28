@@ -99,6 +99,21 @@
        <script src="add-home.js"></script>
        <script src="script-sw.js"></script>
        
+    <!-- Script para verificar se o usuário está logado -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Espera que o Firebase Auth esteja pronto para verificar o usuário
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (!user) {
+                    // Usuário não está logado, redireciona para login
+                    window.location.href = "login.html";
+                } else {
+                    // Usuário está logado, permanece na página inicial
+                    console.log("Usuário autenticado:", user.email);
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
