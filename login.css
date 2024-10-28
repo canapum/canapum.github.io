@@ -82,6 +82,7 @@ button:hover {
   background: #0056b3;
 }
 .google-button {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
