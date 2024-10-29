@@ -38,12 +38,12 @@ color: #311F56;
 font-weight: 500;
 font-size: 0.85rem;
 margin: 0;
-color: #311F56;
+color: #444444;
 }
 .add-info {
 font-size: 0.65rem;
 font-weight: 500;
-color: #311F56;
+color: #444444;
 }
 .message {
 clear: both;
@@ -51,7 +51,7 @@ font-weight: 500;
 margin-top: 25px;
 margin-bottom: 30px;
 line-height: 1.2;
-color: #311F56;
+color: #444444;
 font-size: 1.1rem;
 }
 .app .install-btn-app {
