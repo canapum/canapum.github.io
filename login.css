@@ -4,7 +4,7 @@
 a{
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
-  color: #00D473;
+  color: #007bff;
   cursor: pointer;
 }
 body {
@@ -83,7 +83,7 @@ button {
   font-family: 'Open Sans', sans-serif !important;
 }
 button:hover {
-  background: #0056b3;
+  background: #007bff;
 }
 .google-button {
   font-family: 'Open Sans', sans-serif !important;
