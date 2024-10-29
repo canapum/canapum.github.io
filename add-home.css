@@ -32,7 +32,7 @@ overflow: hidden;
 .app-title {
 font-family: 'Montserrat', sans-serif;
 font-weight: 700;
-color: #311F56;
+color: #444444;
 }
 .app-subtitle {
 font-weight: 500;
@@ -59,7 +59,7 @@ font-size: 1rem;
 font-weight: 700;
 width: 100%;
 background: #00ffbf;
-color: #311f56;
+color: #444444;
 border-radius: 5px;
 border: none;
 padding: 10px;
