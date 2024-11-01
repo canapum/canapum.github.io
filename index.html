@@ -102,42 +102,33 @@
       <!-- FIREBASE CONFIG -->
 
 <script>
-      // Configuração Firebase
-      const firebaseConfig = {
-         apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
          authDomain: "waltemarbr.firebaseapp.com",
          projectId: "waltemarbr",
          storageBucket: "waltemarbr.appspot.com",
          messagingSenderId: "21358148527",
          appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
          measurementId: "G-H16T9ZYGSH"
-      };
-      firebase.initializeApp(firebaseConfig);
-   </script>
+        };
 
-   <!-- Script para verificar o status de autenticação -->
-   <script>
-      document.addEventListener("DOMContentLoaded", function () {
-         // Use localStorage para checar a sessão do usuário
-         const usuarioLogado = localStorage.getItem("usuarioLogado");
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
 
-         if (usuarioLogado === "true") {
-            console.log("Usuário logado anteriormente. Acesso permitido.");
-            return; // Já está logado, fica na página inicial
-         }
-
-         // Verifica o estado de autenticação do Firebase
-         firebase.auth().onAuthStateChanged(function (user) {
+        // Verifica o estado de autenticação
+        onAuthStateChanged(auth, (user) => {
             if (user) {
-               // Usuário está logado; guarda no localStorage
-               localStorage.setItem("usuarioLogado", "true");
-               console.log("Usuário autenticado:", user.email);
+                console.log('Usuário autenticado:', user);
             } else {
-               // Usuário não está logado; redireciona para login
-               window.location.href = "login.html";
+                // Redireciona para a página de login se não estiver autenticado
+                window.location.href = 'login.html';
             }
-         });
-      });
+        });
    </script>
 
 
