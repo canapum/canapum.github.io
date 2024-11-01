@@ -14,6 +14,36 @@
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
+  authDomain: "waltemarbr.firebaseapp.com",
+  projectId: "waltemarbr",
+  storageBucket: "waltemarbr.appspot.com",
+  messagingSenderId: "21358148527",
+  appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
+  measurementId: "G-H16T9ZYGSH"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+
+        // Verifica o estado de autenticação
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                console.log('Usuário autenticado:', user);
+            } else {
+                // Redireciona para a página de login se não estiver autenticado
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
         
     </head>
     <body>
