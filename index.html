@@ -29,7 +29,9 @@
   appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
   measurementId: "G-H16T9ZYGSH"
         };
-
+    
+firebase.initializeApp(firebaseConfig);
+    
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         const auth = getAuth();
