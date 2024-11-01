@@ -17,6 +17,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const analytics = getAnalytics(app);
+const provider = new GoogleAuthProvider();
 
 // Função para verificar o estado da autenticação
 function checkAuthState() {
