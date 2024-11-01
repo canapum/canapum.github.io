@@ -218,3 +218,12 @@ const errorMessages = {
   'auth/wrong-password': 'Senha incorreta. Por favor, tente novamente.',
   'auth/email-already-in-use': 'Este email já está em uso. Por favor, use outro email.',
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Exemplo para Firebase Authentication:
+    firebase.auth().onAuthStateChanged((user) => {
+        if (!user) {
+            // Redireciona o usuário para a página de login caso não esteja logado
+            window.location.href = "login.html";
+        }
+    });
