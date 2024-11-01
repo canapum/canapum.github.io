@@ -1,129 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Portal X</title>
-      <link rel="stylesheet" href="styles.css">
-      <link rel="stylesheet" href="add-home.css" />
-      <link rel="icon" type="image/png" sizes="32x32" href="https://canapum.github.io/favicon32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="https://canapum.github.io/favicon16.png" />
-      <link rel="shortcut icon" href="https://canapum.github.io/favicon32.png" />
-      <link rel="shortcut icon" href="https://canapum.github.io/favicon.ico" />
-      <link rel="manifest" href="manifest.json"/>
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal X</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="add-home.css"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="https://canapum.github.io/favicon32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="https://canapum.github.io/favicon16.png"/>
+        <link rel="shortcut icon" href="https://canapum.github.io/favicon32.png"/>
+        <link rel="shortcut icon" href="https://canapum.github.io/favicon.ico"/>
+        <link rel="manifest" href="manifest.json"/>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- FIREBASE CONFIG -->
+        <script>
+            import {initializeApp} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+            import {getAnalytics} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+            import {getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-<!-- FIREBASE CONFIG -->
-<script>
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
-        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+            const firebaseConfig = {
+                apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
+                authDomain: "waltemarbr.firebaseapp.com",
+                projectId: "waltemarbr",
+                storageBucket: "waltemarbr.appspot.com",
+                messagingSenderId: "21358148527",
+                appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
+                measurementId: "G-H16T9ZYGSH"
+            };
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyB8e4W8z4EFQGgCXl2zQVPZgSj-d2xIHeU",
-             authDomain: "waltemarbr.firebaseapp.com",
-            projectId: "waltemarbr",
-            storageBucket: "waltemarbr.appspot.com",
-            messagingSenderId: "21358148527",
-            appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
-            measurementId: "G-H16T9ZYGSH"
-        };
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            const auth = getAuth();
 
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const auth = getAuth();
-
-        // Verifica o estado de autenticação
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log('Usuário autenticado:', user);
-            } else {
-                // Redireciona para a página de login se não estiver autenticado
-                window.location.href = 'login.html';
+            // Verifica o estado de autenticação
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    console.log('Usuário autenticado:', user);
+                } else {
+                    // Redireciona para a página de login se não estiver autenticado
+                    window.location.href = 'login.html';
+                }
             }
-        });
-</script>
-      
-   </head>
-   <body>
-      <header>
-         <div class="container">
-            <!-- Botão de Menu Mobile -->
-            <ion-icon name="menu-outline" class="menu-icon" onclick="toggleMenu()"></ion-icon>
-            <h1 class="logo">Portal X</h1>
-            <!-- Botão de Entrar -->
-            <a href="login.html" class="btn login-btn">Entrar</a>
-            <!-- Menu de Navegação (escondido por padrão no mobile) -->
-            <nav id="mobile-menu" class="mobile-menu hidden">
-               <ul>
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Serviços</a></li>
-                  <li><a href="#">Contato</a></li>
-               </ul>
-            </nav>
-         </div>
-      </header>
-      <main>
-         <section class="hero">
-            <div class="hero-content">
-               <h2>Bem-vindo ao Portal X</h2>
-               <p>Sua plataforma moderna para acessar conteúdo e serviços incríveis.</p>
-               <a href="login.html" class="cta-btn">Começar Agora</a>
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <!-- Botão de Menu Mobile -->
+                <ion-icon name="menu-outline" class="menu-icon" onclick="toggleMenu()"></ion-icon>
+                <h1 class="logo">Portal X</h1>
+                <!-- Botão de Entrar -->
+                <a href="login.html" class="btn login-btn">Entrar</a>
+                <!-- Menu de Navegação (escondido por padrão no mobile) -->
+                <nav id="mobile-menu" class="mobile-menu hidden">
+                    <ul>
+                        <li>
+                            <a href="#">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="#">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-         </section>
-      </main>
-      <footer>
-         <div class="container">
-            <p>&copy; 2024 Portal X.</p>
-            <div class="social-icons">
-               <a href="#">
-                  <ion-icon name="logo-facebook"></ion-icon>
-               </a>
-               <a href="#">
-                  <ion-icon name="logo-twitter"></ion-icon>
-               </a>
-               <a href="#">
-                  <ion-icon name="logo-instagram"></ion-icon>
-               </a>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Bem-vindo ao Portal X</h2>
+                    <p>Sua plataforma moderna para acessar conteúdo e serviços incríveis.</p>
+                    <a href="login.html" class="cta-btn">Começar Agora</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>&copy;2024 Portal X.</p>
+                <div class="social-icons">
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
             </div>
-         </div>
-      </footer>
-      <script>
-         function toggleMenu() {
-             const menu = document.getElementById('mobile-menu');
-             menu.classList.toggle('hidden');
-         }
-      </script>
-      <!-- ADD HOME-SCREEN -->
-      <div class="app" id="InstallBanner" style="display:none;">
-         <div class="logo-app"></div>
-         <div class="header-app">
-            <div>
-               <p class="app-title">Canapum App</p>
-               <p class="app-subtitle">Simple, Fácil e Poderoso</p>
-               <p class="add-info">Não contém anúncios ⭐ v1.0</p>
+        </footer>
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            }
+        </script>
+        <!-- ADD HOME-SCREEN -->
+        <div class="app" id="InstallBanner" style="display:none;">
+            <div class="logo-app"></div>
+            <div class="header-app">
+                <div>
+                    <p class="app-title">Canapum App</p>
+                    <p class="app-subtitle">Simple, Fácil e Poderoso</p>
+                    <p class="add-info">Não contém anúncios ⭐ v1.0</p>
+                </div>
+                <div class="close-button">
+                    <ion-icon name="close-outline" onclick="closeApp()"></ion-icon>
+                </div>
             </div>
-            <div class="close-button">
-               <ion-icon name="close-outline" onclick="closeApp()"></ion-icon>
-            </div>
-         </div>
-         <p class="message">Adicionar o aplicativo a sua tela inicial?</p>
-         <button class="install-btn-app" id="installButton">Adicionar</button>
-      </div>
-      <script>
-         const rangeInput = document.querySelector('input[type="range"]');
-         
-         rangeInput.addEventListener('input', function() {
-             this.style.setProperty('--slider-value', `${this.value}%`);
-         });
-         
-         // Inicialize o valor da variável
-         rangeInput.style.setProperty('--slider-value', `${rangeInput.value}%`);
-      </script>
-      
-      <script src="add-home.js"></script>
-      <script src="script-sw.js"></script>
-   </body>
+            <p class="message">Adicionar o aplicativo a sua tela inicial?</p>
+            <button class="install-btn-app" id="installButton">Adicionar</button>
+        </div>
+        <script>
+            const rangeInput = document.querySelector('input[type="range"]');
+
+            rangeInput.addEventListener('input', function() {
+                this.style.setProperty('--slider-value', `${this.value}%`);
+            });
+
+            // Inicialize o valor da variável
+            rangeInput.style.setProperty('--slider-value', `${rangeInput.value}%`);
+        </script>
+        <script src="add-home.js"></script>
+        <script src="script-sw.js"></script>
+    </body>
 </html>
