@@ -29,7 +29,9 @@
   appId: "1:21358148527:web:49cd9ab5cfdd71e96c8d5a",
   measurementId: "G-H16T9ZYGSH"
         };
-
+    
+firebase.initializeApp(firebaseConfig);
+    
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         const auth = getAuth();
@@ -121,11 +123,11 @@
             const rangeInput = document.querySelector('input[type="range"]');
 
             rangeInput.addEventListener('input', function() {
-                this.style.setProperty('--slider-value', `${this.value}%`);
+                this.style.setProperty('--slider-value', ${this.value}%);
             });
 
             // Inicialize o valor da variável
-            rangeInput.style.setProperty('--slider-value', `${rangeInput.value}%`);
+            rangeInput.style.setProperty('--slider-value', ${rangeInput.value}%);
         </script>
         <script src="add-home.js"></script>
         <script src="script-sw.js"></script>
