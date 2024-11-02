@@ -33,14 +33,16 @@
         const analytics = getAnalytics(app);
         const auth = getAuth();
 
-        document.addEventListener('DOMContentLoaded', () => {
-            onAuthStateChanged(auth, (user) => {
-                if (!user) {
-                    window.location.href = "login.html";
-                } else {
-                    console.log("Usuário autenticado:", user);
-                }
-            });
+        // Se o usuário já está autenticado, ele deve permanecer na página inicial
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log('Usuário autenticado, permanece na página inicial.');
+    // Nenhuma ação de redirecionamento é necessária, pois o usuário já está logado
+  } else {
+    // Se o usuário não está autenticado, redireciona para a página de login
+    window.location.href = '/login.html';
+  }
+});
         });
     </script>
 </head>
