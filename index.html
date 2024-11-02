@@ -36,15 +36,26 @@ firebase.initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         const auth = getAuth();
 
-        // Verifica o estado de autenticação
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log('Usuário autenticado:', user);
-            } else {
-                // Redireciona para a página de login se não estiver autenticado
-                window.location.href = 'login.html';
-            }
-        });
+//Firebase Authentication ou alguma outra lógica de autenticação:
+        
+document.addEventListener('DOMContentLoaded', () => {
+    // Exemplo para Firebase Authentication:
+    firebase.auth().onAuthStateChanged((user) => {
+        if (!user) {
+            // Redireciona o usuário para a página de login caso não esteja logado
+            window.location.href = "login.html";
+        }
+    });
+    
+    // Se estiver usando uma outra lógica de autenticação:
+    // Verifique se o token ou a sessão de login existe no localStorage ou sessionStorage
+    const isLoggedIn = localStorage.getItem("userLoggedIn"); // ou sessionStorage
+    if (!isLoggedIn) {
+        window.location.href = "login.html";
+    }
+});
+
+
     </script>
         
     </head>
