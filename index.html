@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -36,23 +35,14 @@
         const auth = getAuth();
 
         // Verifica o estado de autenticação
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    console.log('Usuário autenticado:', user);
-
-                    // Verifica se já foi redirecionado para 'sucesso.html'
-                    const alreadyRedirected = localStorage.getItem('alreadyRedirected');
-                    
-                    if (!alreadyRedirected) {
-                        // Redireciona para 'sucesso.html' e armazena a flag
-                        localStorage.setItem('alreadyRedirected', 'true');
-                        window.location.href = 'sucesso.html';
-                    }
-                } else {
-                    // Redireciona para a página de login se não estiver autenticado
-                    window.location.href = 'login.html';
-                }
-            });
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                console.log('Usuário autenticado:', user);
+            } else {
+                // Redireciona para a página de login se não estiver autenticado
+                window.location.href = 'login.html';
+            }
+        });
     </script>
         
     </head>
