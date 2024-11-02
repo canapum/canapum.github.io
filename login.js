@@ -227,11 +227,3 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "login.html";
         }
     });
-
- // Se estiver usando uma outra lógica de autenticação:
-    // Verifique se o token ou a sessão de login existe no localStorage ou sessionStorage
-    const isLoggedIn = localStorage.getItem("userLoggedIn"); // ou sessionStorage
-    if (!isLoggedIn) {
-        window.location.href = "login.html";
-    }
-});
