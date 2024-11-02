@@ -22,18 +22,29 @@ const db = getFirestore(app);
 const analytics = getAnalytics(app);
 const provider = new GoogleAuthProvider();
 
+//inicio onda
 // Função para verificar o estado da autenticação
 function checkAuthState() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       console.log('Usuário já autenticado:', user);
-      window.location.href = '/sucesso.html';
+      // Redirecionar para a página sucesso apenas se não estiver na página inicial
+      if (window.location.pathname === '/login.html') {
+        window.location.href = '/sucesso.html';
+      }
+    } else {
+      // Se o usuário não estiver autenticado e não estiver na página de login, redireciona para login
+      if (window.location.pathname !== '/login.html') {
+        window.location.href = '/login.html';
+      }
     }
   });
 }
 
 // Chama a função para verificar a autenticação quando a página carrega
 checkAuthState();
+
+//fim da onda
 
 // Função para mostrar mensagem de sucesso
 function showSuccessMessage(message) {
