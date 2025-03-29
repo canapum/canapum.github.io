@@ -1,15 +1,15 @@
 {
   "id": "/",
-  "name": "Portal X",
-  "short_name": "Portalx",
+  "name": "Canapum",
+  "short_name": "Canapum",
   "version": "1.0.0",
   "display": "standalone",
-  "background_color": "#00ffbf",
-  "theme_color": "#00ffbf",
+  "background_color": "#5F8D3E",
+  "theme_color": "#5F8D3E",
   "start_url": "/index.html",
   "orientation": "any",
   "scope": "/",
-  "description": "O seu portal de Tecnologia.",
+  "description": "Downloads diretos.",
   "prefer_related_applications": false,
   "related_applications": [
     {
@@ -64,20 +64,20 @@
       "url": "/?videoId=qHZiIxprsrs",
       "icons": [
         {
-          "src": "shortcuts/filme.svg",
+          "src": "shortcuts/filme.png",
           "sizes": "96x96",
           "type": "image/svg"
         }
       ]
     },
     {
-      "name": "Fazer um Pix",
-      "short_name": "Fazer um Pix",
+      "name": "Doação Pix",
+      "short_name": "Doação Pix",
       "description": "Doação Voluntária",
-      "url": "/bank/inter.html",
+      "url": "/bank/donate.html",
       "icons": [
         {
-          "src": "shortcuts/pix.svg",
+          "src": "shortcuts/pix.png",
           "sizes": "96x96",
           "type": "image/svg"
         }
@@ -143,13 +143,13 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot/screenshot-mobile.png",
+      "src": "screenshots/screenshot-mobile.jpg",
       "sizes": "360x640",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "screenshot/screenshot-desktop-wide.jpg",
+      "src": "screenshots/screenshot-desktop-wide.jpg",
       "sizes": "1920x1080",
       "type": "image/jpg",
       "form_factor": "wide"
